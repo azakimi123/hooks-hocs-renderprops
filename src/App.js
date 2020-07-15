@@ -7,9 +7,17 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* <Hooks /> */}
+      <Hooks render={(theme, toggleFn) => (
+        <div className={theme}>
+          <button className='toggle-btn' onClick={toggleFn}>{theme}</button>
+        </div>
+      )}/>
       {/* <ThemeChanger /> */}
-      {/* <RenderProp /> */}
+      <RenderProp render={(theme, toggleFn) => (
+        <div className={theme}>
+          <button className='toggle-btn' onClick={toggleFn}>{theme}</button>
+        </div>
+      )}/>
     </div>
   );
 }
